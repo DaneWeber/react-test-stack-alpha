@@ -1,5 +1,6 @@
 import React from "react";
 import TestRenderer from "react-test-renderer";
+import renderer from "react-test-renderer";
 import LoadingIndicator from "./LoadingIndicator";
 
 describe("LoadingIndicator", () => {
@@ -22,6 +23,16 @@ describe("LoadingIndicator", () => {
 
       // Clean up
       wrapper.unmount();
+    });
+    it("should match the snapshot", () => {
+      const tree = renderer
+        .create(
+          <LoadingIndicator isLoading={false}>
+            <div>ahoy!</div>
+          </LoadingIndicator>
+        )
+        .toJSON();
+      expect(tree).toMatchSnapshot();
     });
   });
 });
