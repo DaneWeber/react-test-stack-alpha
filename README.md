@@ -1,12 +1,15 @@
 # react-test-stack-alpha
-Jest + react-test-renderer
+Jest + react-test-renderer + Cypress + Gherkin
 
 react-test-renderer: https://reactjs.org/docs/test-renderer.html
+cypress:
+gherkin:
 
 ## Repo Creation Steps
 1. `npx create-react-app`
-2. `yarn add --dev react-test-renderer`
-3. `npm test`
+2. `npm install --save-dev react-test-renderer`
+3. `npm install --save-dev cypress-cucumber-preprocessor`
+4. `npm install cypress --save-dev`
 
 ## Post-Clone Steps
 1. `npm install`
